@@ -28,5 +28,5 @@ int main()
         else
             printf("Char %c is not an ASCII character (0 - 127)\n", the_chars[i]);
     }
-    return EXIT_SUCCESS;
+    return 0;
 }
