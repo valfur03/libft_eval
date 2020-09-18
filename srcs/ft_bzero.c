@@ -15,11 +15,17 @@
 
 int main()
 {
+    char org[] = "I wanna live!";
+    bzero(org, 6);
+    printf("Original:\n");
+    for (int i = 0; i < 13; i++)
+        putchar(org[i]);
+    puts("");
     char str[] = "I wanna live!";
     ft_bzero(str, 6);
     printf("User:\n");
-    for (int i = 0; i < 14; i++)
+    for (int i = 0; i < 13; i++)
         putchar(str[i]);
-    printf("\nExpected:\na live!");
+    puts("");
     return 0;
 }
