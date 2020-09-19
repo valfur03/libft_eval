@@ -1,8 +1,10 @@
 1. Place yourself in libft directory to evaluate
 
-2. Clone this repo
+2. Make libft.a
 
-3. Execute 
+3. Clone this repo
+
+4. Execute 
 
    ```
    ./libft_eval/generate.sh
@@ -10,9 +12,9 @@
 
    
 
-4. Check for compilation error
+5. Check for compilation error
 
-5. Execute 
+6. Execute 
 
    ```
    ./libft_eval/run_tests.sh
