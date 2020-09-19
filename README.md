@@ -4,10 +4,10 @@
 
 3. Clone this repo
 
-4. Execute 
+4. Go to libft_eval/ and execute generate.sh
 
    ```
-   ./libft_eval/generate.sh
+   cd libft_eval && ./generate.sh
    ```
 
    
@@ -17,7 +17,7 @@
 6. Execute 
 
    ```
-   ./libft_eval/run_tests.sh
+   ./run_tests.sh
    ```
 
    
@@ -25,7 +25,7 @@
 Note: you can execute
 
 ```
- ./libft_eval/run_tests.sh function_name
+ ./run_tests.sh function_name
 ```
 
  to test a single function
