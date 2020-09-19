@@ -6,7 +6,7 @@
 /*   By: vbotte <vbotte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/19 04:56:11 by vbotte            #+#    #+#             */
-/*   Updated: 2020/09/19 14:11:41 by vbotte           ###   ########.fr       */
+/*   Updated: 2020/09/19 15:17:25 by vbotte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,14 @@
 
 int main()
 {
-	int i, n;
-	int *pData;
-	printf("Amount of numbers to be entered: ");
-	scanf("%d", &i);
-	pData = (int*)ft_calloc(i, sizeof(int));
-	if (pData == NULL) exit(1);
-	for (n = 0; n < i; n++)
-	{
-		printf("Enter number #%d: ", n + 1);
-		scanf("%d", &pData[n]);
-	}
-	printf("You have entered: ");
-	for (n = 0; n < i; n++) 
-		printf("%d ", pData[n]);
-	puts("");
-	free(pData);
+	int	*data;
+
+	data = (int*)ft_calloc(5, sizeof(int));
+	if (data == NULL) exit(1);
+	printf("User\n");
+	for (int i = 0; i < 5; i++)
+		printf("%d", data[i]);
+	free(data);
+	printf("\nExpected:\n00000\n");
 	return 0;
 }

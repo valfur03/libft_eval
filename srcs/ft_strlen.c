@@ -6,7 +6,7 @@
 /*   By: vbotte <vbotte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/08 16:40:25 by vbotte            #+#    #+#             */
-/*   Updated: 2020/09/19 14:17:27 by vbotte           ###   ########.fr       */
+/*   Updated: 2020/09/19 14:56:08 by vbotte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 int main()
 {
-    char szInput[256];
-    printf("Enter a sentence: ");
-    gets(szInput);
-    printf("The sentence entered is %u characters long.\n", (unsigned)ft_strlen(szInput));
+    char str[] = "This string is 33 characters long";
+    printf("User:\n%ld\nExpected:\n33\n", ft_strlen(str));
     return 0;
 }

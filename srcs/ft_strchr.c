@@ -6,7 +6,7 @@
 /*   By: vbotte <vbotte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 14:45:45 by vbotte            #+#    #+#             */
-/*   Updated: 2020/09/19 14:16:57 by vbotte           ###   ########.fr       */
+/*   Updated: 2020/09/19 14:49:41 by vbotte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main ()
     pch = strchr(str, 's');
     while (pch != NULL)
     {
-        printf("found at %I64d\n", pch - str + 1);
+        printf("found at %I64ld\n", pch - str + 1);
         pch = strchr(pch + 1,'s');
     }
     return 0;

@@ -6,7 +6,7 @@
 /*   By: vbotte <vbotte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 14:08:04 by vbotte            #+#    #+#             */
-/*   Updated: 2020/09/19 14:15:16 by vbotte           ###   ########.fr       */
+/*   Updated: 2020/09/19 14:49:25 by vbotte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main ()
     char str[] = "Example string";
     pch = (char*)ft_memchr(str, 'p', strlen(str));
     if (pch != NULL)
-        printf("User:\n'p' found at position %I64d.\n", pch-str+1);
+        printf("User:\n'p' found at position %I64ld.\n", pch-str+1);
     else
         printf("User:\n'p' not found.\n");
     printf("Expected:\n'p' found at position 5.\n");
