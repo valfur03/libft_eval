@@ -6,7 +6,7 @@
 /*   By: vbotte <vbotte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/19 04:24:05 by vbotte            #+#    #+#             */
-/*   Updated: 2020/09/19 17:06:43 by vbotte           ###   ########.fr       */
+/*   Updated: 2020/09/19 17:10:23 by vbotte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ int main()
 	printf("User:\n");
 	for (int i = 0; i < 7; i++)
 		printf("%d ", arr[i]);
-	memmove(arr + 4, arr + 1, 12);
+	int arr2[] = { 1, 23, 54, 0, 74, 234, 13689 };
+	memmove(arr2 + 4, arr2 + 1, 12);
 	printf("\nOriginal:\n");
 	for (int i = 0; i < 7; i++)
-		printf("%d ", arr[i]);
+		printf("%d ", arr2[i]);
 	return 0;
 }
