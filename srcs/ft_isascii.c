@@ -6,13 +6,11 @@
 /*   By: vbotte <vbotte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/08 18:01:34 by vbotte            #+#    #+#             */
-/*   Updated: 2020/09/08 18:01:34 by vbotte           ###   ########.fr       */
+/*   Updated: 2020/09/19 14:13:28 by vbotte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
+#include "../libft_eval.h"
 
 char the_chars[] = { 'A', 0x80, 250, 140 };
 

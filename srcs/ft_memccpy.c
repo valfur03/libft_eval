@@ -6,13 +6,11 @@
 /*   By: vbotte <vbotte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/08 19:39:25 by vbotte            #+#    #+#             */
-/*   Updated: 2020/09/08 19:39:25 by vbotte           ###   ########.fr       */
+/*   Updated: 2020/09/19 14:14:53 by vbotte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "../libft_eval.h"
 
 char* msg = "This is the string: not copied";
 

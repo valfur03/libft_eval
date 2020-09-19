@@ -6,12 +6,11 @@
 /*   By: vbotte <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 15:32:59 by vbotte            #+#    #+#             */
-/*   Updated: 2020/09/09 15:32:59 by vbotte           ###   ########.fr       */
+/*   Updated: 2020/09/19 14:17:44 by vbotte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "../libft_eval.h"
 
 int main ()
 {
