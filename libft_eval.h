@@ -6,7 +6,7 @@
 /*   By: vbotte <vbotte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/19 14:02:38 by vbotte            #+#    #+#             */
-/*   Updated: 2020/09/19 14:13:51 by vbotte           ###   ########.fr       */
+/*   Updated: 2020/09/20 03:32:26 by vbotte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,4 @@ char			*ft_strnstr(char *str, char *to_find, size_t len);
 char			*ft_strrchr(const char *str, int character);
 int				ft_tolower(int character);
 int				ft_toupper(int character);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
