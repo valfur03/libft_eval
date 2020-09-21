@@ -27,4 +27,10 @@ fi
 echo "${WHITE}-------------------"
 echo $'Generating tests...'
 echo "-------------------${NC}"
-make
+if make 2> /dev/null > /dev/null
+then
+	echo "${GREEN}Compilation succeed${NC}" && echo $'\r'
+else
+	echo "${RED}Compilation failed${NC}" && echo $'\r'
+	make
+fi
