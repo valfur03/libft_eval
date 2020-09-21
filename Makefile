@@ -6,7 +6,7 @@
 #    By: vfurmane <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/08 19:32:49 by vfurmane          #+#    #+#              #
-#    Updated: 2020/09/21 16:18:53 by vfurmane         ###   ########.fr        #
+#    Updated: 2020/09/21 18:15:18 by vfurmane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,6 @@ MV			= mv -f
 			$(CC) $(CFLAGS) $< -L.. -lft -o $@
 
 all:		$(EXEC)
-			$(MV) srcs/ft_*.out tests/
 
 clean:
 			$(RM) $(OBJS)

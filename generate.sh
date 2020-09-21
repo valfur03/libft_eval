@@ -30,6 +30,7 @@ echo "-------------------${NC}"
 if make 2> /dev/null > /dev/null
 then
 	echo "${GREEN}Compilation succeed${NC}" && echo $'\r'
+	mv srcs/ft_*.out tests/
 else
 	echo "${RED}Compilation failed${NC}" && echo $'\r'
 	make
