@@ -19,7 +19,7 @@ then
 	echo "${WHITE}---------------------------------"
 	echo "Testing each function of libft..."
 	echo "---------------------------------${NC}" && echo $'\r'
-	for exe in $(find ./tests -maxdepth 1 -name "test_*")
+	for exe in $(find ./tests -maxdepth 1 -name "ft_*.out")
 	do
 		execute ${exe}
 	done
@@ -31,7 +31,7 @@ else
 	echo "-------------------------------------------${NC}" && echo $'\r'
 	for ft_name in $*
 	do
-		exe="./tests/test_${ft_name}"
+		exe="./tests/ft_${ft_name}.out"
 		if find $exe 2> /dev/null > /dev/null
 		then
 			execute ${exe}
