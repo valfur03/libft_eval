@@ -6,7 +6,7 @@
 /*   By: vbotte <vbotte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/08 19:10:10 by vbotte            #+#    #+#             */
-/*   Updated: 2020/09/23 12:35:10 by vfurmane         ###   ########.fr       */
+/*   Updated: 2020/09/23 17:32:30 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ void	test3(void)
 	{
 		int	buffer[7];
 
-		memset(buffer, '\0', 7 * sizeof(*buffer));
 		ft_memcpy(buffer, arr, 7 * sizeof(*buffer));
 		printf("User		: ");
 		for (int i = 0; i < 7; i++)
@@ -65,7 +64,6 @@ void	test3(void)
 	{
 		int	buffer[7];
 
-		memset(buffer, '\0', 7 * sizeof(*buffer));
 		memcpy(buffer, arr, 7 * sizeof(*buffer));
 		printf("Expected	: ");
 		for (int i = 0; i < 7; i++)
