@@ -6,25 +6,101 @@
 /*   By: vbotte <vbotte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 14:28:29 by vbotte            #+#    #+#             */
-/*   Updated: 2020/09/19 14:15:35 by vbotte           ###   ########.fr       */
+/*   Updated: 2020/10/27 22:33:43 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft_eval.h"
 
+void	test1()
+{
+	{
+		int		ret;
+    	char	buffer1[] = "DWgaOtP12df0";
+    	char	buffer2[] = "DWgaOtP12df0";
+		
+	    ret = ft_memcmp(buffer1, buffer2, sizeof(char) * 12);
+		printf("User		: %d\n", ret);
+	}
+	{
+		int		ret;
+    	char	buffer1[] = "DWgaOtP12df0";
+    	char	buffer2[] = "DWgaOtP12df0";
+		
+	    ret = memcmp(buffer1, buffer2, sizeof(char) * 12);
+		printf("Expected	: %d\n", ret);
+	}
+}
+
+void	test2()
+{
+	{
+		int		ret;
+    	char	buffer1[] = "DWgaOaP12df0";
+    	char	buffer2[] = "DWgaOtP12df0";
+		
+	    ret = ft_memcmp(buffer1, buffer2, sizeof(char) * 12);
+		printf("User		: %d\n", ret);
+	}
+	{
+		int		ret;
+    	char	buffer1[] = "DWgaOaP12df0";
+    	char	buffer2[] = "DWgaOtP12df0";
+		
+	    ret = memcmp(buffer1, buffer2, sizeof(char) * 12);
+		printf("Expected	: %d\n", ret);
+	}
+}
+
+void	test3()
+{
+	{
+		int		ret;
+    	char	buffer1[] = "DWgaOtP12df0";
+    	char	buffer2[] = "DWgaOtP10df0";
+		
+	    ret = ft_memcmp(buffer1, buffer2, sizeof(char) * 12);
+		printf("User		: %d\n", ret);
+	}
+	{
+		int		ret;
+    	char	buffer1[] = "DWgaOtP12df0";
+    	char	buffer2[] = "DWgaOtP10df0";
+		
+	    ret = memcmp(buffer1, buffer2, sizeof(char) * 12);
+		printf("Expected	: %d\n", ret);
+	}
+}
+
+void	test4()
+{
+	{
+		int		ret;
+    	char	buffer1[] = "DWgaOtP12df0";
+    	char	buffer2[] = "DWgaOtP12df0";
+		
+	    ret = ft_memcmp(buffer1, buffer2, 0);
+		printf("User		: %d\n", ret);
+	}
+	{
+		int		ret;
+    	char	buffer1[] = "DWgaOtP12df0";
+    	char	buffer2[] = "DWgaOtP12df0";
+		
+	    ret = memcmp(buffer1, buffer2, 0);
+		printf("Expected	: %d\n", ret);
+	}
+}
+
 int main ()
 {
-    char buffer1[] = "DWgaOtP12df0";
-    char buffer2[] = "DWGAOTP12DF0";
-
-    int n;
-
-    n = memcmp (buffer1, buffer2, sizeof(buffer1));
-
-    if (n > 0) printf("User:\n'%s' is greater than '%s'.\n", buffer1, buffer2);
-    else if (n < 0) printf("User:\n'%s' is less than '%s'.\n", buffer1, buffer2);
-    else printf("User:\n'%s' is the same as '%s'.\n", buffer1, buffer2);
-    printf("Expected:\n'DWgaOtP12df0' is greater than 'DWGAOTP12DF0'.\n");
-
+	printf("===== TEST1 =====\n\n");
+	test1();
+	printf("===== TEST2 =====\n\n");
+	test2();
+	printf("===== TEST3 =====\n\n");
+	test3();
+	printf("===== TEST4 =====\n\n");
+	test4();
     return 0;
 }
