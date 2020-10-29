@@ -6,7 +6,7 @@
 /*   By: vbotte <vbotte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/19 14:02:38 by vbotte            #+#    #+#             */
-/*   Updated: 2020/09/20 04:13:20 by vbotte           ###   ########.fr       */
+/*   Updated: 2020/10/29 12:42:29 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include <bsd/string.h>
 
 int				ft_atoi(const char *str);
 void			ft_bzero(void *pointer, size_t number);

@@ -23,7 +23,7 @@ MV			= mv -f
 			$(CC) $(CFLAGS) -c $< -o $@
 
 %.out :		%.o
-			$(CC) $(CFLAGS) $< -L.. -lft -o $@
+			$(CC) $(CFLAGS) $< -lbsd -L.. -lft -o $@
 
 all:		$(EXEC)
 
