@@ -49,3 +49,19 @@ If you pass arguments, it will execute the functions you specified.
 ```shell
 ./run_tests.sh bzero memmove
 ```
+
+### Docker
+
+If you want to use it with Docker, go into the returned directory and execute these commands.
+
+```shell
+docker build -t libft_eval -f libft_eval/Dockerfile .
+docker run -it libft_eval
+```
+
+If you pass arguments, it will execute the functions you specified.
+
+```shell
+docker run -it libft_eval bzero memmove
+```
+
