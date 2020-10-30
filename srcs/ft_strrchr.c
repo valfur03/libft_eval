@@ -6,18 +6,117 @@
 /*   By: vbotte <vbotte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 15:28:30 by vbotte            #+#    #+#             */
-/*   Updated: 2020/09/19 15:54:50 by vbotte           ###   ########.fr       */
+/*   Updated: 2020/10/30 11:36:47 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft_eval.h"
 
-int main ()
+void	test1()
 {
-    char str[] = "This is a sample string";
-    char *pch;
-    pch = strrchr(str, 's');
-    printf("User:\nLast occurence of 's' found at %d\n", (int)(pch - str + 1));
-    printf("Expected:\nLast occurence of 's' found at 18\n");
+	{
+		char	str[] = "Hello\0World";
+		char	*ptr;
+
+		ptr = ft_strrchr(str, 'o');
+		if (!ptr)
+			printf("User		: Not found\n");
+		else
+			printf("User		: (%c)%s -> %d\n", *ptr, ptr + 1, (int)(ptr - str + 1));
+	}
+	{
+		char	str[] = "Hello\0World";
+		char	*ptr;
+
+		ptr = strrchr(str, 'o');
+		if (!ptr)
+			printf("User		: Not found\n");
+		else
+			printf("User		: (%c)%s -> %d\n", *ptr, ptr + 1, (int)(ptr - str + 1));
+	}
+}
+
+void	test2()
+{
+	{
+		char	str[] = "Hello World";
+		char	*ptr;
+
+		ptr = ft_strrchr(str, 'H');
+		if (!ptr)
+			printf("User		: Not found\n");
+		else
+			printf("User		: (%c)%s -> %d\n", *ptr, ptr + 1, (int)(ptr - str + 1));
+	}
+	{
+		char	str[] = "Hello World";
+		char	*ptr;
+
+		ptr = strrchr(str, 'H');
+		if (!ptr)
+			printf("User		: Not found\n");
+		else
+			printf("User		: (%c)%s -> %d\n", *ptr, ptr + 1, (int)(ptr - str + 1));
+	}
+}
+
+void	test3()
+{
+	{
+		char	str[] = "Hello World";
+		char	*ptr;
+
+		ptr = ft_strrchr(str, '\0');
+		if (!ptr)
+			printf("User		: Not found\n");
+		else
+			printf("User		: (%c)%s -> %d\n", *ptr, ptr + 1, (int)(ptr - str + 1));
+	}
+	{
+		char	str[] = "Hello World";
+		char	*ptr;
+
+		ptr = strrchr(str, '\0');
+		if (!ptr)
+			printf("User		: Not found\n");
+		else
+			printf("User		: (%c)%s -> %d\n", *ptr, ptr + 1, (int)(ptr - str + 1));
+	}
+}
+
+void	test4()
+{
+	{
+		char	str[] = "Hello World";
+		char	*ptr;
+
+		ptr = ft_strrchr(str, 'q');
+		if (!ptr)
+			printf("User		: Not found\n");
+		else
+			printf("User		: (%c)%s -> %d\n", *ptr, ptr + 1, (int)(ptr - str + 1));
+	}
+	{
+		char	str[] = "Hello World";
+		char	*ptr;
+
+		ptr = strrchr(str, 'q');
+		if (!ptr)
+			printf("User		: Not found\n");
+		else
+			printf("User		: (%c)%s -> %d\n", *ptr, ptr + 1, (int)(ptr - str + 1));
+	}
+}
+
+int		main()
+{
+	printf("===== TEST1 =====\n\n");
+	test1();
+	printf("===== TEST2 =====\n\n");
+	test2();
+	printf("===== TEST3 =====\n\n");
+	test3();
+	printf("===== TEST4 =====\n\n");
+	test4();
     return 0;
 }
