@@ -6,7 +6,7 @@
 /*   By: vbotte <vbotte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 15:28:30 by vbotte            #+#    #+#             */
-/*   Updated: 2020/10/30 11:36:47 by vfurmane         ###   ########.fr       */
+/*   Updated: 2020/10/30 12:12:05 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ void	test1()
 
 		ptr = strrchr(str, 'o');
 		if (!ptr)
-			printf("User		: Not found\n");
+			printf("Expected	: Not found\n");
 		else
-			printf("User		: (%c)%s -> %d\n", *ptr, ptr + 1, (int)(ptr - str + 1));
+			printf("Expected	: (%c)%s -> %d\n", *ptr, ptr + 1, (int)(ptr - str + 1));
 	}
 }
 
@@ -54,9 +54,9 @@ void	test2()
 
 		ptr = strrchr(str, 'H');
 		if (!ptr)
-			printf("User		: Not found\n");
+			printf("Expected	: Not found\n");
 		else
-			printf("User		: (%c)%s -> %d\n", *ptr, ptr + 1, (int)(ptr - str + 1));
+			printf("Expected	: (%c)%s -> %d\n", *ptr, ptr + 1, (int)(ptr - str + 1));
 	}
 }
 
@@ -78,9 +78,9 @@ void	test3()
 
 		ptr = strrchr(str, '\0');
 		if (!ptr)
-			printf("User		: Not found\n");
+			printf("Expected	: Not found\n");
 		else
-			printf("User		: (%c)%s -> %d\n", *ptr, ptr + 1, (int)(ptr - str + 1));
+			printf("Expected	: (%c)%s -> %d\n", *ptr, ptr + 1, (int)(ptr - str + 1));
 	}
 }
 
@@ -102,9 +102,9 @@ void	test4()
 
 		ptr = strrchr(str, 'q');
 		if (!ptr)
-			printf("User		: Not found\n");
+			printf("Expected	: Not found\n");
 		else
-			printf("User		: (%c)%s -> %d\n", *ptr, ptr + 1, (int)(ptr - str + 1));
+			printf("Expected	: (%c)%s -> %d\n", *ptr, ptr + 1, (int)(ptr - str + 1));
 	}
 }
 
