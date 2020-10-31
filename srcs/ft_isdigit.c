@@ -6,21 +6,59 @@
 /*   By: vbotte <vbotte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/08 18:03:28 by vbotte            #+#    #+#             */
-/*   Updated: 2020/09/19 14:14:06 by vbotte           ###   ########.fr       */
+/*   Updated: 2020/10/31 19:34:54 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft_eval.h"
-
-int main()
+void	test1()
 {
-    char str[] = "1776ad";
-    int year;
-    if (ft_isdigit(str[0]))
-    {
-        year = atoi(str);
-        printf("User:\nThe year that followed %d was %d.\n", year, year + 1);
-        printf("Expected:\nThe year that followed 1776 was 1777.\n");
-    }
-    return 0;
+	{
+		char	digit = '0';
+
+		while (digit <= '9' && ft_isdigit(digit))
+			digit++;
+		printf("User		: %s", digit - 1 == '9' ? "Is digit\n" : "Is not digit\n");
+	}
+	{
+		char	digit = '0';
+
+		while (digit <= '9' && isdigit(digit))
+			digit++;
+		printf("Expected	: %s", digit - 1 == '9' ? "Is digit\n" : "Is not digit\n");
+	}
+}
+
+void	test2()
+{
+	char	str[] = "AbThSp4_g(?d8SD= o-#";
+
+	printf("		  %s\n", str);
+	{
+		int	i;
+
+		i = 0;
+		printf("User		: ");
+		while (i < 20)
+			printf("%d", ft_isdigit(str[i++]) != 0);
+		printf("\n");
+	}
+	{
+		int	i;
+
+		i = 0;
+		printf("Expected	: ");
+		while (i < 20)
+			printf("%d", isdigit(str[i++]) != 0);
+		printf("\n");
+	}
+}
+
+int		main()
+{
+	printf("===== TEST1 =====\n\n");
+	test1();
+	printf("===== TEST2 =====\n\n");
+	test2();
+    return (0);
 }
