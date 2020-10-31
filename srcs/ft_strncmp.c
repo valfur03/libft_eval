@@ -6,19 +6,93 @@
 /*   By: vbotte <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/09 15:32:59 by vbotte            #+#    #+#             */
-/*   Updated: 2020/09/19 14:17:44 by vbotte           ###   ########.fr       */
+/*   Updated: 2020/10/30 15:41:30 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft_eval.h"
 
-int main ()
+void	test1()
+{	
+	char	str1[] = "R2D2";
+	char	str2[] = "R2A6";
+	int		len = 2;
+
+	{
+		int	ret = ft_strncmp(str1, str2, len);
+
+		printf("User		: %d\n", ret);
+	}
+	{
+		int	ret = strncmp(str1, str2, len);
+
+		printf("Expected	: %d\n", ret);
+	}
+}
+
+void	test2()
+{	
+	char	str1[] = "R2D2";
+	char	str2[] = "R2A6";
+	int		len = 4;
+
+	{
+		int	ret = ft_strncmp(str1, str2, len);
+
+		printf("User		: %d\n", ret);
+	}
+	{
+		int	ret = strncmp(str1, str2, len);
+
+		printf("Expected	: %d\n", ret);
+	}
+}
+
+void	test3()
+{	
+	char	str1[] = "R2A6";
+	char	str2[] = "R2D2";
+	int		len = 4;
+
+	{
+		int	ret = ft_strncmp(str1, str2, len);
+
+		printf("User		: %d\n", ret);
+	}
+	{
+		int	ret = strncmp(str1, str2, len);
+
+		printf("Expected	: %d\n", ret);
+	}
+}
+
+void	test4()
+{	
+	char	str1[] = "R2D2";
+	char	str2[] = "R2A6";
+	int		len = 8;
+
+	{
+		int	ret = ft_strncmp(str1, str2, len);
+
+		printf("User		: %d\n", ret);
+	}
+	{
+		int	ret = strncmp(str1, str2, len);
+
+		printf("Expected	: %d\n", ret);
+	}
+}
+
+int		main()
 {
-    char str[][5] = { "R2D2" , "C3PO" , "R2A6" };
-    int n;
-    printf("Looking for R2 astromech droids...\n");
-    for (n = 0; n < 3; n++)
-        if (!ft_strncmp(str[n], "R2xx", 2))
-        printf("found %s\n", str[n]);
-    return 0;
+	printf("===== TEST1 =====\n\n");
+	test1();
+	printf("===== TEST2 =====\n\n");
+	test2();
+	printf("===== TEST3 =====\n\n");
+	test3();
+	printf("===== TEST4 =====\n\n");
+	test4();
+    return (0);
 }
