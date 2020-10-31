@@ -6,77 +6,52 @@
 /*   By: vbotte <vbotte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/08 18:58:06 by vbotte            #+#    #+#             */
-/*   Updated: 2020/09/22 12:30:28 by vfurmane         ###   ########.fr       */
+/*   Updated: 2020/10/31 14:21:13 by vfurmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft_eval.h"
 
-void	test1(void)
+void	test1()
 {
+	int		len = 5;
+
 	{
-    	char	str[] = "I wanna live!";
-		
-    	ft_bzero(str, 6);
-    	printf("User		: ");
-    	for (int i = 0; i < 13; i++)
-    	    printf("%c", str[i]);
-		printf("\n");
+		char	ptr[] = "Hello World";
+
+		ft_bzero(ptr + 6, len);
+		printf("User		: %s\n", ptr);
 	}
 	{
-		
-    	char	str[] = "I wanna live!";
-		
-    	bzero(str, 6);
-    	printf("Expected	: ");
-    	for (int i = 0; i < 13; i++)
-    	    printf("%c", str[i]);
-		printf("\n");
+		char	ptr[] = "Hello World";
+
+		bzero(ptr + 6, len);
+		printf("Expected	: %s\n", ptr);
 	}
 }
 
-void	test2(void)
+void	test2()
 {
-	{
-    	char	str[] = "Hello world and 42";
-		
-    	ft_bzero(str + 6, 10);
-    	printf("User		: ");
-    	for (int i = 0; i < 18; i++)
-    	    printf("%c", str[i]);
-		printf("\n");
-	}
-	{
-		
-    	char	str[] = "Hello world and 42";
-		
-    	bzero(str + 6, 10);
-    	printf("Expected	: ");
-    	for (int i = 0; i < 18; i++)
-    	    printf("%c", str[i]);
-		printf("\n");
-	}
-}
+	int	len = 10;
 
-void	test3(void)
-{
 	{
-		int	arr[] = { 1, 23, 54, 0, 74, 234, 13689 };
+		int	i = -1;
+		int	ptr[] = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
 
-    	ft_bzero(arr, 6);
-    	printf("User		: ");
-    	for (int i = 0; i < 7; i++)
-    	    printf("%d ", arr[i]);
+		ft_bzero(ptr, len);
+		printf("User		: ");
+		while (++i < 10)
+			printf("%d%c", ptr[i], i < 9 ? ' ' : '\0');
 		printf("\n");
 	}
 	{
-		
-		int	arr[] = { 1, 23, 54, 0, 74, 234, 13689 };
-		
-    	bzero(arr, 6);
-    	printf("Expected	: ");
-    	for (int i = 0; i < 7; i++)
-    	    printf("%d ", arr[i]);
+		int	i = -1;
+		int	ptr[] = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+
+		bzero(ptr, len);
+		printf("Expected	: ");
+		while (++i < 10)
+			printf("%d%c", ptr[i], i < 9 ? ' ' : '\0');
 		printf("\n");
 	}
 }
@@ -87,7 +62,5 @@ int		main(void)
 	test1();
 	printf("====== TEST2 =====\n\n");
 	test2();
-	printf("====== TEST3 =====\n\n");
-	test3();
     return 0;
 }
