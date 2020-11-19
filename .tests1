@@ -6,13 +6,6 @@ memmove
 memchr
 memcmp
 strlen
-strlcpy
-strlcat
-strchr
-strrchr
-strnstr
-strncmp
-atoi
 isalpha
 isdigit
 isalnum
@@ -20,5 +13,12 @@ isascii
 isprint
 toupper
 tolower
+strchr
+strrchr
+strncmp
+strlcpy
+strlcat
+strnstr
+atoi
 calloc
 strdup
