@@ -6,7 +6,7 @@
 /*   By: vbotte <vbotte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 11:03:38 by vbotte            #+#    #+#             */
-/*   Updated: 2020/11/20 11:35:04 by vbotte           ###   ########.fr       */
+/*   Updated: 2020/11/20 11:51:49 by vbotte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,22 @@ void    test4()
 	}
 }
 
+void    test5()
+{
+	{
+		char s[] = "";
+		char c[] = "";
+		char **res = ft_split(s, c);
+		printf("User            :");
+		int i = 0;
+		while (res[i])
+			printf("%s", res[i++]);
+	}
+	{
+		printf("\nExpected        :\n");
+	}
+}
+
 int             main()
 {
 	printf("===== TEST1 =====\n\n");
@@ -84,5 +100,7 @@ int             main()
 	test3();
 	printf("===== TEST4 =====\n\n");
 	test4();
+	printf("===== TEST5 =====\n\n");
+	test5();
 	return (0);
 }
